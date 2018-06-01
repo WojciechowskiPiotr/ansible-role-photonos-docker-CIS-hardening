@@ -10,6 +10,10 @@ galaxy_info:
     - cis
     - photonos
     - vmware
-    - docker-ce
+    - docker
+  platforms:
+  - name: Linux
+    versions:
+    - all
 
 dependencies: []
