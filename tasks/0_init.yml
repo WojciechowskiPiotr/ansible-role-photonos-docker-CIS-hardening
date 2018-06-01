@@ -1,0 +1,17 @@
+---
+
+- name: Install additional core packages
+  shell: /bin/tdnf install -y less wget iproute2 iputils ntp iptraf net-tools net-snmp git man-pages man-db syslog-ng
+
+- name: Clone CIS validation docker-bench-security repository
+  git:
+    repo: 'https://github.com/docker/docker-bench-security.git'
+    dest: ~/docker-bench-security/
+    clone: yes
+    update: yes
+
+- name: Run initial docker-bench-security scan
+  shell: ./docker-bench-security.sh > ~/report-initial.txt
+  args:
+    chdir: ~/docker-bench-security
+

@@ -1,0 +1,13 @@
+---
+
+#- name: Environment preparation
+#  include: 0_init.yml
+
+#- name: Chapter 1 - Host Configuration
+#  include: 1_host.yml
+
+#- name: Chapter 2 - Network Configuration
+#  include: 2_network.yml
+
+- name: Chapter 3 - Docker daemon configuration files
+  include: 3_configuration_files.yml

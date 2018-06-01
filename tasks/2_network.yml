@@ -1,0 +1,40 @@
+---
+
+- name: Stop docker service
+  shell: systemctl stop docker
+
+- name: Apply configuration file
+  template: src=daemon.json.j2 dest=/etc/docker/daemon.json owner=root group=root mode=0644
+
+- name: Create group 'dockremap' for namespace
+  group:
+    name: dockremap
+    state: present
+
+- name: Create subuid
+  template:
+    src: subuid.j2
+    dest: /etc/subuid
+    owner: root
+    group: root
+    mode: 0644
+
+- name: Create subgid
+  template:
+    src: subuid.j2
+    dest: /etc/subgid
+    owner: root
+    group: root
+    mode: 0644
+
+- name: Enable syslog-ng
+  systemd:
+    name: syslog-ng
+    enabled: yes
+    state: started
+
+- name: Start docker service
+  shell: systemctl start docker
+
+
+

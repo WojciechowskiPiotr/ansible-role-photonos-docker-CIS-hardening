@@ -1,0 +1,19 @@
+---
+
+- name: Create system default configuration file (not used in Photon)
+  file:
+    path: /etc/default/docker
+    state: touch
+    owner: root
+    group: root
+    mode: 0644
+
+- name: Update ownersip and permission to default configuration file
+  file:
+    path: /etc/default/docker
+    owner: root
+    group: root
+    mode: 0644
+
+
+
