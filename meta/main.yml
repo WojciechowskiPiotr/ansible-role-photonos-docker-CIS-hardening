@@ -1,0 +1,15 @@
+galaxy_info:
+  author: Piotr Wojciechowski
+  description: Harden out-of-the-box VMware PhotonOS installation based on CIS Docker Community Edition benchmark
+  company: Piotr Wojciechowski (IT Playground)
+  license: GPLv3
+  min_ansible_version: 2.0
+  github_branch: master
+  galaxy_tags:
+    - security
+    - cis
+    - photonos
+    - vmware
+    - docker-ce
+
+dependencies: []
