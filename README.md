@@ -13,6 +13,13 @@ Root account must be configured and accessible for this version
 
 None.
 
+Install
+-------
+
+```sh
+ansible-galaxy install xxx.xxx
+```
+
 ## Example Playbook
 
 An example how to use the role in the playbook
