@@ -5,7 +5,7 @@
 
 Ansible role to harden out-of-the-box VMware PhotonOS installation based on CIS Docker Community Edition benchmark
 
-Please note this is an early stage version of the role 
+Please note this is an early stage version of the role. This role harden the configuration of PhotonOS minimal installation based on results of the scan. 
 
 ## Requirements
 
@@ -14,7 +14,7 @@ This role should be used only on fresh PhotonOS installation
 
 ## Dependencies
 
-None.
+docker-py >= 1.7.0
 
 Install
 -------
