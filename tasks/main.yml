@@ -4,13 +4,16 @@
   include: 0_init.yml
 
 - name: Chapter 1 - Host Configuration
-  include: 1_host.yml
+  include: section_01.yml
 
-- name: Chapter 2 - Network Configuration
-  include: 2_network.yml
+- name: Chapter 2 - Docker daemon configuration
+  include: section_02.yml
 
 - name: Chapter 3 - Docker daemon configuration files
-  include: 3_configuration_files.yml
+  include: section_03.yml
+  
+- name: Chapter 4 - Container Images and Build File
+  include: section_04.yml
 
 - name: Final scan
   include: 99_finish.yml
