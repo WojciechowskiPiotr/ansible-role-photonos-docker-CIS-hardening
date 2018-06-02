@@ -1,5 +1,8 @@
 ---
 - hosts: all
   remote_user: root
+  gather_facts: no
+  vars:
+    request_debug_output: false
   roles:
-    - photonos-docker-CIS-hardening
+    - ../..
