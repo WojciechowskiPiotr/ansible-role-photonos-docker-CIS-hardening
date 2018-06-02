@@ -1,0 +1,17 @@
+---
+- name: Start test container prior to final scan
+  docker_container:
+    name: test_nginx
+    image: nginx
+    state: started
+
+- name: Run final docker-bench-security scan
+  shell: ./docker-bench-security.sh > ~/report-final.txt
+  args:
+    chdir: ~/docker-bench-security
+
+- name: Stop test container
+  docker_container:
+    name: test_nginx
+    image: nginx
+    state: stopped
