@@ -54,7 +54,16 @@ An example how to use the role in the playbook
   vars:
     request_debug_output: false
   roles:
-    - photonos-docker-CIS-hardening
+    - docker-CIS-hardening
 ```
+The role is thoroughly tagged so that you can run certain sections or certain levels of checks:
 
+Test only items from section 4
+```sh
+ansible-playbook -i hosts -C playbook.yml -t section4
+```   
 
+Apply changes only from items in section 4, 5, and 6
+```sh
+ansible-playbook -i hosts playbook.yml -t section4,section5,section6
+``` 
