@@ -1,7 +1,7 @@
 ---
 
 - name: Environment preparation
-  include: 0_init.yml
+  include: init.yml
 
 - name: Chapter 1 - Host Configuration
   include: section_01.yml
@@ -16,4 +16,4 @@
   include: section_04.yml
 
 - name: Final scan
-  include: 99_finish.yml
+  include: finish.yml
